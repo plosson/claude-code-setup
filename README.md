@@ -32,23 +32,23 @@ This reads environment variables and generates:
 | `CLAUDE_OAUTH_REFRESH_TOKEN` | Yes | OAuth refresh token |
 | `CLAUDE_OAUTH_EXPIRES_AT` | No | Token expiration timestamp |
 
-## Example: Docker
+## Example
 
-```dockerfile
-FROM node:22-slim
+See the `example/` directory for a complete Docker setup:
 
-RUN useradd -m claude
-WORKDIR /workspace
-USER claude
+```bash
+# Export credentials
+npx claude-code-setup env > example/.env
 
-ENTRYPOINT ["sh", "-c", "npx claude-code-setup && exec \"$@\"", "--"]
-CMD ["npx", "@anthropic-ai/claude-code"]
+# Build and run
+./example/run.sh
 ```
 
-Run:
+Or manually:
+
 ```bash
-npx claude-code-setup env > .env
-docker run -it --env-file .env -v $(pwd):/workspace myimage
+docker build -t claude-code-example example/
+docker run -it --rm --env-file example/.env -v $(pwd):/workspace claude-code-example
 ```
 
 ## License
