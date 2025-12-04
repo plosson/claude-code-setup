@@ -1,0 +1,32 @@
+{
+  "name": "claude-code-setup",
+  "version": "1.0.0",
+  "description": "Export Claude Code credentials for Docker/CI usage",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plosson/claude-code-setup.git"
+  },
+  "homepage": "https://github.com/plosson/claude-code-setup#readme",
+  "bugs": {
+    "url": "https://github.com/plosson/claude-code-setup/issues"
+  },
+  "bin": {
+    "claude-code-setup": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "docker",
+    "credentials",
+    "anthropic"
+  ],
+  "author": "plosson",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
