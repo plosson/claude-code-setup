@@ -7,4 +7,4 @@ RUN chown claude:claude /workspace
 USER claude
 
 ENTRYPOINT ["sh", "-c", "npx -y claude-code-setup && exec \"$@\"", "--"]
-CMD ["npx", "-y", "@anthropic-ai/claude-code"]
+CMD ["npx", "-y", "@anthropic-ai/claude-code", "-p", "Say 'Claude Code is working!' and nothing else"]
