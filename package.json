@@ -11,7 +11,7 @@
     "url": "https://github.com/plosson/claude-code-setup/issues"
   },
   "bin": {
-    "claude-code-setup": "./bin/cli.js"
+    "claude-code-setup": "bin/cli.js"
   },
   "files": [
     "bin",
