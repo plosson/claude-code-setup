@@ -1,6 +1,6 @@
 {
   "name": "claude-code-setup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Export Claude Code credentials for Docker/CI usage",
   "repository": {
     "type": "git",
